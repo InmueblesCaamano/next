@@ -11,7 +11,7 @@ body{
 .background-img{
 
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.452),rgba(0, 0, 0, 0.24)), url(../../public/img/bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.452),rgba(0, 0, 0, 0.24)), url(../../public/img/bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,10 +28,26 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-.manuButtons{
+.menuButtons{
   color: rgb(255, 255, 255);
   margin-left: 40px;
   font-size: large;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  padding: 3px 10px;
+}
+
+.menuButtons:hover{
+  transform: scale(1.05);
+  color: var(--yellow);
+}
+
+.menuButtons:active{
+  border: 1px solid rgba(255, 255, 255, 0.178);
+  background-color: #d4d0d00e;
+  border-radius: 15px;
+  padding: 3px 10px;
 }
 .menu{
   display: flex;
@@ -79,5 +95,38 @@ p{
   background-color: rgb(255, 255, 255);
 }
 
-.tittle{
+.ws-button{
+  
+  display: flex ;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  animation: infinite;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-name: jump;
+  transition-duration: 0.3s;
+}
+
+.ws-img-btn:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.ws-img-btn:active{
+  transform: scale(0.95);
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  90% {
+    transform: translateY(0px);
+  }
+  95% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
